@@ -255,7 +255,7 @@ class SRNLabelEncode(BaseRecLabelEncode):
     def __call__(self, data):
         text = data['label']
         text = self.encode(text)
-        char_num = len(self.character)
+        char_num = len(self.character_str)
         if text is None:
             return None
         if len(text) > self.max_text_len:
